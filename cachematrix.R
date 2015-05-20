@@ -1,6 +1,3 @@
-## Note: A fair bit of the code is an adaptation of the code given in the Assignment Two
-## Handout mean example. In the directions, we were asked to cite everything, so I did.
-
 ## Function One: Create a Special Matrix Object that can Cache its Inverse
 
 ## First Line Given in File
@@ -11,7 +8,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 	m <- NULL
 	
-	## Set the Value of the Cached Matrix (From Mean Example in Assignment Two Handout)
+	## Set the Value of the Cached Matrix
 	## x is superassigned to y and m is superassigned to null. This is done to allow 
 	## for the solving to take place within the environment set out by the second-level function
 	## and not within the global environment.
@@ -22,13 +19,14 @@ makeCacheMatrix <- function(x = matrix()) {
 		x <<- y
 		m <<- NULL
             }
-	## Get the Value of the Cached Matrix (From Mean Example in Assignment Two Handout)
+	## Get the Value of the Cached Matrix
 
 	get <- function() x
 
 	## Set the Value of the Inverted Matrix (Permutation of Mean Example in Assignment Two Handout)
 	## "M <<- solve" Allows for the solving to take place within the environment set out by the
 	## function and not within the global environment.
+	## Source: http://article.gmane.org/gmane.comp.lang.r.general/227066
 
 	setmatrix <- function(solve) m <<- solve
 
